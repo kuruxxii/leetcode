@@ -1,3 +1,9 @@
+/*
+The key idea behind this solution is that for each number nums[i] in the array,
+it checks if the complement target - nums[i] has already been encountered before.
+If it has, then nums[i] and the previously encountered number sum up to the target.
+*/
+
 function twoSum(nums: number[], target: number): number[] {
   let map = new Map();
   for (let i = 0; i < nums.length; i++) {
