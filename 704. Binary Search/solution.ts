@@ -1,3 +1,5 @@
+// When the target is the last number in the array, low needs to be equal to high
+
 function search(nums: number[], target: number): number {
   let low = 0,
     high: number = nums.length - 1;
