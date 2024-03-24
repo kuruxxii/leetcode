@@ -34,15 +34,15 @@ Passing by Value:
 Passing by Reference:
 - For non-primitive types like objects (including arrays, functions, and in this case, linked list nodes), values are passed by reference.
 - When you pass an object to a function, a reference (address in memory) to that object is passed, not the entire object itself.
-- If you modify the properties or values of the object inside the function, the original object outside the function will also be modified because they both point to the same memory location.
+- If you modify the properties or values of the object inside the function, the original object outside the function will also be modified
+  because they both point to the same memory location.
 
-In the case of the `reverseList` function, the `head` parameter is passed by reference because it is a `ListNode` object (or `null`). This means that inside the function, you are working with a reference to the original linked list, not a copy of the entire list.
+In the case of the `reverseList` function, the `head` parameter is passed by reference because it is a `ListNode` object (or `null`).
+This means that inside the function, you are working with a reference to the original linked list, not a copy of the entire list.
 
 The key points to understand are:
 
 1. The `head` parameter inside the function points to the same memory location as the original linked list passed from outside the function.
 2. When you modify the `next` pointers of the nodes inside the function, you are modifying the original linked list because the nodes are passed by reference.
 3. The function returns a new "head" pointer (`prev`) that points to the first node of the reversed linked list, which is still part of the original list (just with modified `next` pointers).
-
-So, while the function doesn't create any new nodes, it modifies the existing nodes by changing their `next` pointers, effectively reversing the linked list in-place.
 */
